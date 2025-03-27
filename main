@@ -39,6 +39,9 @@ def egalitarian_division(valuation_matrix):
         optimal
         >>> np.round(result['min_utility'], 2)
         np.float64(47.37)
+        >>> # Sibling A walks away with 53% of the rings and exactly 0% of the necklaces.
+        >>> # Sibling B - the indifferent one - gets 53% of the necklaces just to balance everything out.
+        >>> # Sibling C ends up with 47% of both items. Not perfect for them since they love necklaces, but it's a compromise.
 
         >>> # CASE 3: Unequal valuations where perfect equality isn't possible
         >>> # Agent Y values everything at 100
