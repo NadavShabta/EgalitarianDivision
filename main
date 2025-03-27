@@ -8,11 +8,11 @@ def egalitarian_division(valuation_matrix):
         >>> # CASE 1: Classic two-person division (like inheriting a farm)
         >>> # Ami values Wood:80, Oil:19, Steel:1
         >>> # Tami values Wood:60, Oil:1, Steel:39
-        >>> farm_division = np.array([
+        >>> first_division = np.array([
         ...     [80, 19, 1],
         ...     [70, 1, 29]
         ... ])
-        >>> result = egalitarian_division(farm_division)
+        >>> result = egalitarian_division(first_division)
         >>> print(result['status'])
         optimal
         >>> np.round(result['min_utility'], 2)
@@ -23,7 +23,7 @@ def egalitarian_division(valuation_matrix):
         >>> # Interpretation:
         >>> # - Ami gets 50% wood, all oil (100%), no steel
         >>> # - Tami gets 50% wood, no oil, all steel (100%)
-        >>> # Both end up equally happy with utility=50
+        >>> # Both end up equally happy BARUCH HASHEM
 
         >>> # CASE 2: Three siblings dividing jewelry (rings, necklaces)
         >>> # Sibling A values rings highly (90), necklaces low (10)
@@ -39,9 +39,9 @@ def egalitarian_division(valuation_matrix):
         optimal
         >>> np.round(result['min_utility'], 2)
         np.float64(47.37)
-        >>> # Sibling A walks away with 53% of the rings and exactly 0% of the necklaces.
-        >>> # Sibling B - the indifferent one - gets 53% of the necklaces just to balance everything out.
-        >>> # Sibling C ends up with 47% of both items. Not perfect for them since they love necklaces, but it's a compromise.
+        >>> # Sibling A gets 53% of the rings and exactly 0% of the necklaces.
+        >>> # Sibling B gets 53% of the necklaces just to balance everything out.
+        >>> # Sibling C gets 47% of both items. Not perfect for them since they love necklaces, but it's a compromise.
 
         >>> # CASE 3: Unequal valuations where perfect equality isn't possible
         >>> # Agent Y values everything at 100
